@@ -13,7 +13,7 @@
     "test:local": "BASE_URL=http://localhost:4200 npx playwright test",
     "test:report": "npx playwright test && npx playwright show-report",
     "test:ui": "npx playwright test --ui"
-  },
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",

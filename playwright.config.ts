@@ -46,6 +46,10 @@ export default defineConfig({
       testMatch: /.*\.setup\.ts/,
     },
     {
+      name: "spec",
+      testMatch: /.*\.spec\.ts/,
+    },
+    {
       name: "chromium",
       dependencies: ["setup"],
       use: { ...devices["Desktop Chrome"], permissions: ["clipboard-read"] },
