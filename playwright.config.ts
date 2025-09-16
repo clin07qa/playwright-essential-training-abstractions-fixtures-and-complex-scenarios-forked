@@ -1,11 +1,11 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices, expect} from "@playwright/test";
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-import dotenv from "dotenv";
-import path from "path";
+import * as dotenv from "dotenv";
+import * as path from "path";
 dotenv.config({ path: path.resolve(__dirname, ".env") });
 
 /**
@@ -94,3 +94,20 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
+
+expect.extend({
+  toBeNumber(received: number) {
+    const check = typeof received == "number";
+    if (check) {
+      return {
+        message: () => "passed",
+        pass: true,
+      };
+    } else {
+      return {
+        message: () => `toBeNumber() assertion failed.\nYou expected ${received} to be a number but it's a ${typeof received}`,
+        pass: false,
+      }
+    }
+  }
+})
