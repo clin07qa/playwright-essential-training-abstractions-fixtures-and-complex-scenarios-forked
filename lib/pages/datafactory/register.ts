@@ -1,7 +1,8 @@
 import { request, expect } from "@playwright/test";
 
 export async function registerUser(email: string, password: string) {
-  const apiUrl = process.env.API_URL
+  //const apiUrl = process.env.API_URL;
+  const apiUrl = "https://api.practicesoftwaretesting.com";
   const createRequestContext = await request.newContext();
   const response = await createRequestContext.post(apiUrl+"/users/register", {
     data: {

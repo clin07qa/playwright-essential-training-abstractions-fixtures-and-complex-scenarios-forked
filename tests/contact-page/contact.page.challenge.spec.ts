@@ -1,13 +1,13 @@
-import { test, expect } from "@playwright/test";
-import { LoginPage } from "@pages/login.page";
-import { ContactPage } from "@pages/contact.page";
+import { test, expect } from "@fixtures/pages.fixture";
+//import { LoginPage } from "@pages/login.page";
+//import { ContactPage } from "@pages/contact.page";
 import { registerUser } from "@datafactory/register";
 
-test("submit contact from as a registered user", async({ context, page }) => {
+test("submit contact from as a registered user", async({ context, page, contactPage, loginPage }) => {
   const email = `test${Date.now()}@test.com`;
   const password = 'MatchaLatteEnjoyer1000$';
-  const loginPage = new LoginPage(page);
-  const contactPage = new ContactPage(page);
+  //const loginPage = new LoginPage(page);
+  //const contactPage = new ContactPage(page);
   const messageUserAuthFile = '.auth/messageUser.json';
 
   await registerUser(email, password);

@@ -4,7 +4,7 @@
     "paths": {
       "@datafactory/*": ["lib/pages/datafactory/*"],
       "@helpers/*": ["lib/pages/helpers/*"],
-      "@fixtures": ["lib/pages/fixtures/*"],
+      "@fixtures/*": ["lib/pages/fixtures/*"],
       "@pages/*": ["lib/pages/pages/*"]
     }
   }
