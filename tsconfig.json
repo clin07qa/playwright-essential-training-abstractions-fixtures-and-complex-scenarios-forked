@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@datafactory/*": ["lib/pages/datafactory/*"],
       "@helpers/*": ["lib/pages/helpers/*"],

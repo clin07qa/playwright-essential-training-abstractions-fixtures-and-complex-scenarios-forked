@@ -7,6 +7,8 @@
     "node": ">=18.0.0"
   },
   "scripts": {
+    "start": "cd bagel-shop && npm run start",
+    "install:bagel-shop": "cd bagel-shop && npm install",
     "test": "npx playwright test",
     "test:chromium": "npx playwright test --project chromium",
     "test:first": "npx playwright test --grep @first",
